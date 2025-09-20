@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+body {
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+
+@theme inline {
+    --color-main: #0aad0a;
+}
