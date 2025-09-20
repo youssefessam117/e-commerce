@@ -17,7 +17,6 @@ export const useCartStore = defineStore('cart', () => {
 
 
     const authStore = useAuthStore();
-    const isLoading = ref(false);
     const canUpdateQuantity = ref(true);
 
     function addToCart(productID: string) {

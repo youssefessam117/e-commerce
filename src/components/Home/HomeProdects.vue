@@ -8,12 +8,10 @@
 
 <script setup lang="ts">
 import axios from "axios";
-import { onMounted, reactive, ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useLoading } from "vue-loading-overlay";
 import { IProduct } from "../../types/index.ts";
 import Product from "./Product.vue";
-import { useLoading } from "vue-loading-overlay";
-import { useAlert } from "../../composbles/useAlert.ts";
-import { useGetApi } from "../../composbles/useGetApi.ts";
 
 const isLoading = ref(false);
 //

@@ -37,7 +37,6 @@
   <loading
     v-model:active="isLoading"
     :can-cancel="true"
-    :on-cancel="true"
     :is-full-page="true"
     loader="dots"
     color="#3498db"

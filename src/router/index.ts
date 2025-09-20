@@ -1,14 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import routes from './routes/index.ts'
 import { useAuthStore } from '@/stores/Auth/index.ts';
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: routes as RouteRecordRaw[],
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach((to, _) => {
   const authStore = useAuthStore();
   if (to.meta.requiresAuth && !authStore.isLogedIn) {
     return { name: 'login' };
